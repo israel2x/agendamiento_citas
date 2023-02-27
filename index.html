@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Funcrisa | Citas</title>
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sidebar start -->
+    <div class="container">
+      <aside>
+        <ul>
+          <li class="active" data-step="1">
+            <i class="icon">1</i>
+            <div class="label">
+              <span>Paso 1</span>
+              <span>Información del Paciente</span>
+            </div>
+          </li>
+          <li data-step="2">
+            <i class="icon">2</i>
+            <div class="label">
+              <span>Paso 2</span>
+              <span>Información de Contacto</span>
+            </div>
+          </li>
+          <li data-step="3">
+            <i class="icon">3</i>
+            <div class="label">
+              <span>Paso 3</span>
+              <span>Domicilio del Paciente</span>
+            </div>
+          </li>
+          <li data-step="4">
+            <i class="icon">4</i>
+            <div class="label">
+              <span>Paso 4</span>
+              <span>Registro</span>
+            </div>
+          </li>
+          <!--  <li data-step="5">
+            <i class="icon">5</i>
+            <div class="label">
+              <span>Paso 5</span>
+              <span>Pagar Cita</span>
+            </div>
+          </li>
+          <li data-step="6">
+            <i class="icon">6</i>
+            <div class="label">
+              <span>Paso 6</span>
+              <span>Datos de la Cita</span>
+            </div>
+          </li> -->
+        </ul>
+      </aside>
+      <!-- Sidebar end -->
+
+      <!-- Step 1 start -->
+      <form action="" data-step="1">
+        <div class="step-1 step-cont" data-step="1">
+          <header>
+            <h2>Paciente</h2>
+            <p>Ingrese la información del paciente</p>
+          </header>
+          <div class="input-box">
+            <label for="name">Nombres</label>
+            <input type="text" name="name" id="name" placeholder="Juan Pablo" />
+          </div>
+          <div class="input-box">
+            <label for="lastname">Apellidos</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              placeholder="Piguave Bustamante"
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Nacionalidad</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="tipo_identificacion">Tipo de Identificación</label>
+            <!-- <input
+              type="select"
+              name="tipo_identificacion"
+              id="tipo_identificacion"
+              placeholder=""
+            />  -->
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>Cédula</option>
+              <option value="RUC">RUC</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="cedula">Identificación</label>
+            <input type="text" name="cedula" id="cedula" placeholder="" />
+          </div>
+          <div class="input-box">
+            <label for="datebirth">Fecha de Nacimiento</label>
+            <input type="date" name="datebirth" id="datebirth" placeholder="" />
+          </div>
+        </div>
+        <!-- Step 1 end -->
+
+        <!-- Step 2 start -->
+        <div class="step-2 step-cont" data-step="2">
+          <header>
+            <h2>Información de Contacto</h2>
+            <p>Información personal del paciente</p>
+          </header>
+          <div class="input-box">
+            <label for="name">Genero</label>
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>Hombre</option>
+              <option value="RUC">Mujer</option>
+              <option value="Pasaporte">Otro</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="nationality">Celular</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Telef. Conv.</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="nationality">Email de Contacto</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Convenio</label>
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>SIN CONVENIO</option>
+              <option value="RUC">IESS</option>
+              <option value="Pasaporte">OTRO</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="nationality">Ocupación</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!-- Step 2 end -->
+
+        <!-- Step 3 start -->
+        <div class="step-3 step-cont" data-step="3">
+          <header>
+            <h2>Información del Domicilio</h2>
+            <p>Ingrese la información de acuerdo a su residencia</p>
+          </header>
+          <div class="input-box">
+            <label for="tipo_identificacion">Provincia</label>
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>Guayas</option>
+              <option value="RUC">Azuay</option>
+              <option value="Pasaporte">Cañar</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="tipo_identificacion">Cantón</label>
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>Guayas</option>
+              <option value="RUC">Azuay</option>
+              <option value="Pasaporte">Cañar</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="tipo_identificacion">Ciudad o Parroquia</label>
+            <select name="tipo_identificacion" id="tipo_identificacion">
+              <option value="Cedula" selected>Guayas</option>
+              <option value="RUC">Azuay</option>
+              <option value="Pasaporte">Cañar</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label for="nationality">Barrio</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Sector</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Calle</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Número</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+          <div class="input-box">
+            <label for="nationality">Referencia</label>
+            <input
+              type="text"
+              name="nationality"
+              id="nationality"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!-- Step 3 end -->
+
+        <!-- Step 4 start -->
+        <div class="step-4 step-cont" data-step="4">
+          <header>
+            <h2>Registro de Paciente</h2>
+            <p>Comfirmación del registro</p>
+          </header>
+          <!-- <ul class="sub-and-add-ons"></ul>
+          <div class="total-cont"></div> -->
+        </div>
+        <!-- Step 4 end -->
+
+        <!-- Step 5 start -->
+        <div class="step-5 step-cont" data-step="5">
+          <img src="./assets/images/icon-thank-you.svg" alt="" />
+          <h2>Registro Exitoso!</h2>
+          <p>
+            Bienvenido a la familia Funcrisa, ahora ya puedes agendar tus Citas
+            Ingresando con tu correo y contarseña.
+          </p>
+          <!-- <p>
+            Su Cita a sido agendada, recuerde estar mínimo 30 min antes de su
+            cita, si tiene algún problema o no va asistir puede comunicarse a
+            este correo: funcrisa@gmail.com
+          </p>
+          <button class="next">Descargar Cita</button> -->
+          <button class="next">Agendar Cita</button>
+        </div>
+        <!-- Step 5 end -->
+
+        <div class="buttons">
+          <button class="back">Regresar</button>
+          <button class="next">Siguiente</button>
+        </div>
+      </form>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

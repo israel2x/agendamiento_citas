@@ -1,0 +1,734 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../assets/fonts/Ubuntu-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../assets/fonts/Ubuntu-regular.ttf) format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../assets/fonts/Ubuntu-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+/* start global rules */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--magnolia);
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.hidden {
+  display: none !important;
+}
+.container {
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* start global rules */
+
+/* start variables */
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+/* end variables */
+/* start component */
+.container form header h2 {
+  color: var(--marine-blue);
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+.container form header p {
+  padding-inline-end: 30px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .container form header p {
+    margin-bottom: 50px;
+  }
+}
+.container form header p,
+input::placeholder {
+  color: var(--cool-gray);
+}
+form .buttons {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--white);
+}
+@media (max-width: 767px) {
+  form .buttons {
+    box-shadow: 0 0 10px 0 var(--light-blue);
+  }
+}
+
+@media (min-width: 992px) {
+  form .buttons {
+    padding-inline: 120px;
+  }
+}
+form .buttons button {
+  display: block;
+  border: none;
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+form .buttons .back {
+  color: var(--cool-gray);
+  transition: 0.5s color;
+  background-color: var(--white);
+}
+form .buttons .back:hover {
+  color: var(--marine-blue);
+}
+form .buttons .next {
+  background-color: var(--marine-blue);
+  transition: 0.5s opacity;
+}
+form .buttons .next:hover {
+  opacity: 0.8;
+}
+form .buttons .confirmar {
+  background-color: var(--purplish-blue);
+  transition: 0.5s;
+}
+form .buttons .confirmar:hover {
+  background-color: var(--pastel-blue);
+}
+/* end component */
+
+/* start sidebar */
+.container {
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0 10px 0 var(--light-gray);
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    column-gap: 0px;
+    align-items: center;
+    background-color: var(--white);
+    padding-block: 15px;
+    border-radius: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    column-gap: 0px;
+  }
+}
+.container aside {
+  color: var(--white);
+}
+@media (max-width: 767px) {
+  .container aside {
+    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 172px;
+  }
+}
+@media (min-width: 768px) {
+  .container aside {
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 30px;
+    min-height: 568px;
+    min-width: 274px;
+    border-radius: 10px;
+    height: 100%;
+  }
+}
+.container aside ul {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .container aside ul {
+    flex-direction: column;
+    row-gap: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .container aside ul {
+    gap: 20px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    translate: -50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container aside ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.container aside ul li .icon {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--light-blue);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .container aside ul li .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.container aside ul li.active .icon {
+  background-color: var(--light-blue);
+  color: black;
+}
+.container aside ul li .label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .container aside ul li .label {
+    display: none;
+  }
+}
+.container aside ul li .label span:first-child {
+  color: var(--cool-gray);
+}
+.container aside ul li .label span:last-child {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+/* end sidebar */
+
+/* start step 1 */
+.container form {
+  z-index: 1;
+  background-color: var(--white);
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin-top: calc(172px - 72px);
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .container form {
+    margin-top: 0;
+    height: 100%;
+    padding-block-start: 50px;
+    padding-bottom: 78px;
+    position: relative;
+  }
+}
+@media (min-width: 992px) {
+  .container form {
+    padding-inline: 120px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container form {
+    height: 700px;
+  }
+}
+
+.container form .step-1 .input-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-bottom: 20px;
+}
+.container form .step-1 .input-box label {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+}
+.container form .step-1 .input-box label[data-msg] + input {
+  border-color: var(--strawberry-red);
+}
+.container form .step-1 .input-box label[data-msg] {
+  display: flex;
+  justify-content: space-between;
+}
+.container form .step-1 .input-box label[data-msg]::after {
+  content: attr(data-msg);
+  color: var(--strawberry-red);
+  font-weight: 500;
+}
+.container form .step-1 .input-box input[type="text"] {
+  text-transform: capitalize;
+}
+.container form .step-1 .input-box input::placeholder {
+  font-weight: normal;
+}
+.container form .step-1 .input-box input {
+  border: 1px solid var(--light-gray);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+.container form .step-1 .input-box input:focus {
+  outline: none;
+  border-color: var(--purplish-blue);
+}
+
+/* end step 1 */
+
+/* start step 2 */
+
+.container form .step-2 .input-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-bottom: 20px;
+}
+.container form .step-2 .input-box label {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+}
+.container form .step-2 .input-box label[data-msg] + input {
+  border-color: var(--strawberry-red);
+}
+.container form .step-2 .input-box label[data-msg] {
+  display: flex;
+  justify-content: space-between;
+}
+.container form .step-2 .input-box label[data-msg]::after {
+  content: attr(data-msg);
+  color: var(--strawberry-red);
+  font-weight: 500;
+}
+.container form .step-2 .input-box input[type="text"] {
+  text-transform: capitalize;
+}
+.container form .step-2 .input-box input::placeholder {
+  font-weight: normal;
+}
+.container form .step-2 .input-box input {
+  border: 1px solid var(--light-gray);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+.container form .step-2 .input-box input:focus {
+  outline: none;
+  border-color: var(--purplish-blue);
+}
+
+/* form .step-2 {
+}
+form .step-2 .plans {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+@media (min-width: 768px) {
+  form .step-2 .plans {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+}
+form .step-2 .plans .box {
+  padding: 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  display: flex;
+  column-gap: 15px;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: 0.5s;
+  flex: 1;
+  height: 208px;
+}
+form .step-2 .plans .box:has(:checked) {
+  background-color: var(--magnolia);
+}
+form .step-2 .plans .box:has(:checked),
+form .step-2 .plans .box:hover {
+  border-color: var(--purplish-blue);
+}
+@media (min-width: 768px) {
+  form .step-2 .plans .box {
+    flex-direction: column;
+    padding-right: 30px;
+    justify-content: space-between;
+  }
+}
+form .step-2 .plans .box input {
+  display: none;
+}
+form .step-2 .plans .box img {
+  width: 40px;
+}
+form .step-2 .plans .box .content {
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+form .step-2 .plans .box .content h3,
+form .step-2 .plans .box .content .offer {
+  color: var(--marine-blue);
+}
+form .step-2 .plans .box .content .price {
+  color: var(--cool-gray);
+}
+form .step-2 .plans .box .content .offer {
+  font-size: 14px;
+}
+form .step-2 .register-plan {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  background-color: var(--alabaster);
+  padding: 20px;
+  border-radius: 10px;
+}
+form .step-2 .register-plan span {
+  color: var(--cool-gray);
+  text-transform: capitalize;
+}
+form .step-2 .register-plan input[value="monthly"] ~ .monthly {
+  color: var(--marine-blue);
+}
+form .step-2 .register-plan input[value="yearly"] ~ .yearly {
+  color: var(--marine-blue);
+}
+form .step-2 .register-plan .check {
+  border: none;
+  background-color: var(--marine-blue);
+  height: 25px;
+  width: 50px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+form .step-2 .register-plan .check::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: var(--white);
+  top: 4px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+form .step-2 .register-plan input[value="yearly"] ~ .check::after {
+  right: 4px;
+}
+form .step-2 .register-plan input[value="monthly"] ~ .check::after {
+  left: 4px;
+} */
+/* end step 2 */
+
+/* start step 3 */
+
+.container form .step-3 .input-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  margin-bottom: 20px;
+}
+.container form .step-3 .input-box label {
+  text-transform: capitalize;
+  color: var(--marine-blue);
+}
+.container form .step-3 .input-box label[data-msg] + input {
+  border-color: var(--strawberry-red);
+}
+.container form .step-3 .input-box label[data-msg] {
+  display: flex;
+  justify-content: space-between;
+}
+.container form .step-3 .input-box label[data-msg]::after {
+  content: attr(data-msg);
+  color: var(--strawberry-red);
+  font-weight: 500;
+}
+.container form .step-3 .input-box input[type="text"] {
+  text-transform: capitalize;
+}
+.container form .step-3 .input-box input::placeholder {
+  font-weight: normal;
+}
+.container form .step-3 .input-box input {
+  border: 1px solid var(--light-gray);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+.container form .step-3 .input-box input:focus {
+  outline: none;
+  border-color: var(--purplish-blue);
+}
+/* 
+form .step-3 {
+}
+form .step-3 .add-ons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+form .step-3 .add-ons .box:has(input:checked) {
+  background-color: var(--magnolia);
+}
+form .step-3 .add-ons .box:has(input:checked),
+form .step-3 .add-ons .box:hover {
+  border-color: var(--purplish-blue);
+}
+form .step-3 .add-ons .box {
+  border: 1px solid var(--light-gray);
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.5s;
+}
+form .step-3 .add-ons .box input {
+  visibility: hidden;
+}
+form .step-3 .add-ons .box .label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  position: relative;
+}
+form .step-3 .add-ons .box input:checked + .label::after,
+form .step-3 .add-ons .box .label::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  translate: 0 -50%;
+  border-radius: 5px;
+}
+form .step-3 .add-ons .box .label::before {
+  border: 1px solid var(--light-gray);
+}
+form .step-3 .add-ons .box input:checked + .label::after {
+  background-image: url(../assets/images/icon-checkmark.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 15px;
+  background-color: var(--purplish-blue);
+}
+form .step-3 .add-ons .box .label h3 {
+  color: var(--marine-blue);
+}
+form .step-3 .add-ons .box .label p {
+  color: var(--cool-gray);
+}
+form .step-3 .add-ons .box .price {
+  width: fit-content;
+  margin-left: auto;
+  color: var(--purplish-blue);
+} */
+/* end step 3 */
+/* start step 4 */
+form .step-4 {
+}
+form .step-4 .sub-and-add-ons {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: var(--alabaster);
+  row-gap: 25px;
+}
+form .step-4 .sub-and-add-ons,
+form .step-4 .total {
+  padding: 30px 25px;
+}
+@media (max-width: 767px) {
+  form .step-4 .sub-and-add-ons {
+    padding: 20px;
+    row-gap: 20px;
+  }
+}
+form .step-4 .sub-and-add-ons li,
+.total {
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+form .step-4 .sub-and-add-ons .main {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--light-gray);
+}
+@media (max-width: 767px) {
+  form .step-4 .sub-and-add-ons .main {
+    padding-bottom: 15px;
+  }
+}
+form .step-4 .sub-and-add-ons .main .label {
+  text-transform: capitalize;
+}
+form .step-4 .sub-and-add-ons .main .label span {
+  color: var(--marine-blue);
+  font-weight: 500;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  form .step-4 .sub-and-add-ons .main .label span {
+    font-size: 18px;
+  }
+}
+form .step-4 .sub-and-add-ons .main .label a {
+  display: block;
+  margin-top: 5px;
+  color: var(--cool-gray);
+  text-decoration: underline;
+  transition: 0.5s;
+  font-size: 17px;
+}
+
+form .step-4 .sub-and-add-ons .main .label a:hover {
+  color: var(--purplish-blue);
+}
+form .step-4 .sub-and-add-ons .main .price {
+  color: var(--marine-blue);
+  font-weight: bold;
+}
+form .step-4 .sub-and-add-ons .add-on .price {
+  color: var(--marine-blue);
+}
+form .step-4 .sub-and-add-ons .add-on .label,
+form .step-4 .total .label {
+  color: var(--cool-gray);
+}
+form .step-4 .total .label {
+  font-size: 17px;
+}
+form .step-4 .total .price {
+  color: var(--purplish-blue);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* end step 4 */
+/* start step 5 */
+form .step-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding-block: 60px;
+}
+@media (min-width: 992px) {
+  form .step-5 {
+    padding-right: 50px;
+  }
+}
+form .step-5 img {
+  display: block;
+  width: 70px;
+  margin-bottom: 15px;
+}
+form .step-5 h2 {
+  color: var(--marine-blue);
+  font-weight: bold;
+  font-size: 35px;
+}
+form .step-5 p {
+  text-align: center;
+  line-height: 1.7;
+  color: var(--cool-gray);
+}
+/* end step 5 */

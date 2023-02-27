@@ -1,0 +1,36 @@
+{
+  "step-2": {
+    "arcade": {
+      "monthly": "$9/mo",
+      "yearly": "$90/yr",
+      "offer": "2 months free"
+    },
+    "advanced": {
+      "monthly": "$12/mo",
+      "yearly": "$120/yr",
+      "offer": "2 months free"
+    },
+    "pro": {
+      "monthly": "$15/mo",
+      "yearly": "$150/yr",
+      "offer": "2 months free"
+    }
+  },
+  "step-3": {
+    "online services": {
+      "monthly": "+$1/mo",
+      "yearly": "+$10/yr",
+      "description": "access to multiplayer games"
+    },
+    "larger storage": {
+      "monthly": "+$2/mo",
+      "yearly": "+$20/yr",
+      "description": "extra 1 tb of cloud save"
+    },
+    "customizable profile": {
+      "monthly": "+$2/mo",
+      "yearly": "+$20/yr",
+      "description": "custom theme on your profile"
+    }
+  }
+}
